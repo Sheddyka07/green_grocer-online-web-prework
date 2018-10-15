@@ -13,6 +13,6 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon| 
     if cart.has_key? (coupon[:item]) && cart[:item][:count] >= coupon[:num]
       item_w_coupon = coupon[:item] + "W/COUPON"
-    if cart.has_  
+    if cart.has_key? (item_w_coupon)  
     
     
