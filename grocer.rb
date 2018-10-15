@@ -13,12 +13,12 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
         if cart.has_key?(coupon[:item]) && cart[coupon[:item]][:count] >= coupon[:num]
             item_withcoupon = coupon[:item] + " W/COUPON" #adds new k,v pair called "ITEM NAME W/COUPON"
-        if cart.has_key?(item_withcoupon)
-            cart[item_withcoupon][:count] += 1 #adds the count number to the porperty hash of couponed item
-        else
-            cart[item_withcoupon] = {price: coupon[:cost], clearance: cart[coupon[:item]][:clearance], count: 1} #adds the coupon price to the property hash of the couponed item
-        end
-        cart[coupon[:item]][:count] -= coupon[:num] #removes the number of discounted items from the original item's count
+            if cart.has_key?(item_withcoupon)
+              cart[item_withcoupon][:count] += 1 #adds the count number to the porperty hash of couponed item
+            else
+              cart[item_withcoupon] = {price: coupon[:cost], clearance: cart[coupon[:item]][:clearance], count: 1} #adds the coupon price to the property hash of the couponed item
+            end
+           cart[coupon[:item]][:count] -= coupon[:num] #removes the number of discounted items from the original item's count
         end
     end
     cart
