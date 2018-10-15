@@ -1,5 +1,5 @@
 def consolidate_cart(cart)
   consolidate_hash = {}
   cart.each do |key, value|
-    cart[:count] = item.count
+    value[:count] = item.count
     
