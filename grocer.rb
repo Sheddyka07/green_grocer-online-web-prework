@@ -4,7 +4,7 @@ def consolidate_cart(cart)
     item.each do |name, attributes|
       attributes[:count] = cart.count(item) #adds a count for the total amount of specific items
       end
-    consolidated_cart.merge!(item)
+    consolidated_cart.merge!(item) #removes duplicates while merging items from cart hash to this hash
   end
   consolidated_cart
 end
