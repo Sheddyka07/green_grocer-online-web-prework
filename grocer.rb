@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   consolidate_hash = {}
   cart.each do |item|
-    item.each do |key, value|
+    item.each do |grocery, value|
     if consolidate_hash.has_key?(key)
       consolidate_hash[key][:count] += 1
     else
