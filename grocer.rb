@@ -1,14 +1,11 @@
 def consolidate_cart(cart)
-  consolidate_hash = {}
-  cart.each do |i|
-    i.each do |k, v|
-    if consolidate_hash.has_key?(k)
-      consolidate_hash[k][:count] += 1
-    else
-      consolidate_hash[k][:count] = 1 
+  consolidated_cart = {}
+  cart.each do |item|
+    item.each do |name, attributes|
+      attributes[:count] = cart.count(item)
     end
+    consolidated_cart.merge!(item)
   end
-  end
-  consolidate_hash
+  consolidated_cart
 end
     
