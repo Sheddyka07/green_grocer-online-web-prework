@@ -27,7 +27,7 @@ end
 def apply_clearance(cart)     
     cart.each do |item, attributes|
         if attributes[:clearance] == true
-            attributes[:price] = (attributes[:price]*(0.8)).round(2)
+            attributes[:price] = (attributes[:price]*(0.8)).round(2) #takes 20% off the price
         end
     end
     cart
