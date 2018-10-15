@@ -14,6 +14,6 @@ def apply_coupons(cart, coupons)
     if cart.has_key? (coupon[:item]) && cart[:item][:count] >= coupon[:num]
       item_w_coupon = coupon[:item] + "W/COUPON"
     if cart.has_key? (item_w_coupon)  
-      cart
+      cart[item_w_coupon][:count] += 1
     
-    
+     
