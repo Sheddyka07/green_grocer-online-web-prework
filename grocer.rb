@@ -10,6 +10,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  coupons.each do |coupon|  
+  coupons.each do |coupon| 
+    if 
     
     
