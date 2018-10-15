@@ -3,7 +3,7 @@ def consolidate_cart(cart)
   cart.each do |item|
     item.each do |name, attributes|
       attributes[:count] = cart.count(item)
-    end
+      end
     consolidated_cart.merge!(item)
   end
   consolidated_cart
