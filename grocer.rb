@@ -5,7 +5,10 @@ def consolidate_cart(cart)
     if consolidate_hash.has_key?(key)
       consolidate_hash[key][:count] += 1
     else
-      hash[key][:count]
+      hash[key][:count] = 1 
+    end
   end
+  end
+  consolidate_hash
 end
     
