@@ -8,4 +8,7 @@ def consolidate_cart(cart)
   end
   consolidated_cart
 end
+
+def apply_coupons
+  
     
