@@ -16,6 +16,6 @@ def apply_coupons(cart, coupons)
     if cart.has_key? (item_w_coupon)  
       cart[item_w_coupon][:count] += 1
     else 
-      
+      cart
     
      
