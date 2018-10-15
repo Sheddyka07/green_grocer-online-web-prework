@@ -1,3 +1,3 @@
-def consolidate_cart(array)
+def consolidate_cart(cart)
   
     
